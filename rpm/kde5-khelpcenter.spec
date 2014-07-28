@@ -16,13 +16,6 @@ Source0:    %{name}-%{version}.tar.xz
 Source100:  kde5-khelpcenter.yaml
 Source101:  kde5-khelpcenter-rpmlintrc
 Requires:   kde5-filesystem
-Requires:   kf5-umbrella
-Requires:   kf5-kconfig-devel
-Requires:   kf5-kinit-devel
-Requires:   kf5-kcmutils-devel
-Requires:   kf5-khtml-devel
-Requires:   kf5-kdelibs4support-devel
-Requires:   kf5-kdoctools-devel
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  pkgconfig(Qt5Core)
@@ -38,6 +31,13 @@ BuildRequires:  pkgconfig(Qt5Script)
 BuildRequires:  kde5-rpm-macros
 BuildRequires:  extra-cmake-modules
 BuildRequires:  qt5-tools
+BuildRequires:  kf5-umbrella
+BuildRequires:  kf5-kconfig-devel
+BuildRequires:  kf5-kinit-devel
+BuildRequires:  kf5-kcmutils-devel
+BuildRequires:  kf5-khtml-devel
+BuildRequires:  kf5-kdelibs4support-devel
+BuildRequires:  kf5-kdoctools-devel
 BuildRequires:  desktop-file-utils
 
 

@@ -26,6 +26,13 @@ PkgBR:
     - kde5-rpm-macros
     - extra-cmake-modules
     - qt5-tools
+    - kf5-umbrella
+    - kf5-kconfig-devel
+    - kf5-kinit-devel
+    - kf5-kcmutils-devel
+    - kf5-khtml-devel
+    - kf5-kdelibs4support-devel
+    - kf5-kdoctools-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
@@ -39,13 +46,6 @@ PkgConfigBR:
     - Qt5Script
 Requires:
     - kde5-filesystem
-    - kf5-umbrella
-    - kf5-kconfig-devel
-    - kf5-kinit-devel
-    - kf5-kcmutils-devel
-    - kf5-khtml-devel
-    - kf5-kdelibs4support-devel
-    - kf5-kdoctools-devel
 
 RequiresPost:
     - /sbin/ldconfig
