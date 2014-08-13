@@ -1,4 +1,4 @@
-Name         : kde5-khelpcenter
+Name         : khelpcenter
 Version      : 5.0.0
 Release      : 1
 Group        : System/Base
@@ -23,16 +23,15 @@ Configure    : none
 Builder      : none
 
 PkgBR:
-    - kde5-rpm-macros
+    - kf5-rpm-macros
     - extra-cmake-modules
     - qt5-tools
-    - kf5-umbrella
-    - kf5-kconfig-devel
-    - kf5-kinit-devel
-    - kf5-kcmutils-devel
-    - kf5-khtml-devel
-    - kf5-kdelibs4support-devel
-    - kf5-kdoctools-devel
+    - kconfig-devel
+    - kinit-devel
+    - kcmutils-devel
+    - khtml-devel
+    - kdelibs4support-devel
+    - kdoctools-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
@@ -45,7 +44,7 @@ PkgConfigBR:
     - Qt5PrintSupport
     - Qt5Script
 Requires:
-    - kde5-filesystem
+    - kf5-filesystem
 
 RequiresPost:
     - /sbin/ldconfig
@@ -54,18 +53,18 @@ RequiresPostUn:
 
 Files:
     - "%doc README.htdig README.metadata COPYING"
-    - "%{_kde5_bindir}/khelpcenter"
-    - "%{_kde5_libexecdir}/khc_indexbuilder"
-    - "%{_kde5_libexecdir}/khc_htdig.pl"
-    - "%{_kde5_libexecdir}/khc_htsearch.pl"
-    - "%{_kde5_libexecdir}/khc_mansearch.pl"
-    - "%{_kde5_libexecdir}/khc_docbookdig.pl"
-    - "%{_kde5_libdir}/libkdeinit5_khelpcenter.so"
-    - "%{_kde5_datadir}/khelpcenter"
+    - "%{_kf5_bindir}/khelpcenter"
+    - "%{_kf5_libdir}/libexec/khc_indexbuilder"
+    - "%{_kf5_libdir}/libexec/khc_htdig.pl"
+    - "%{_kf5_libdir}/libexec/khc_htsearch.pl"
+    - "%{_kf5_libdir}/libexec/khc_mansearch.pl"
+    - "%{_kf5_libdir}/libexec/khc_docbookdig.pl"
+    - "%{_kf5_libdir}/libkdeinit5_khelpcenter.so"
+    - "%{_kf5_sharedir}/khelpcenter"
     - "%{_datadir}/applications/Help.desktop"
     - "%{_datadir}/config.kcfg/khelpcenter.kcfg"
-    - "%{_datadir}/kservices5/khelpcenter.desktop"
-    - "%{_datadir}/dbus-1/interfaces/org.kde.khelpcenter.kcmhelpcenter.xml"
-    - "%{_datadir}/doc/HTML/en/khelpcenter"
-    - "%{_datadir}/doc/HTML/en/fundamentals"
-    - "%{_datadir}/doc/HTML/en/onlinehelp"
+    - "%{_kf5_servicesdir}/*"
+    - "%{_kf5_dbusinterfacesdir}/org.kde.khelpcenter.kcmhelpcenter.xml"
+    - "%{_kf5_htmldir}/en/khelpcenter"
+    - "%{_kf5_htmldir}/en/fundamentals"
+    - "%{_kf5_htmldir}/en/onlinehelp"
