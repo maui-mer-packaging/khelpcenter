@@ -8,6 +8,12 @@ Name:       khelpcenter
 # >> macros
 # << macros
 
+# >> bcond_with
+# << bcond_with
+
+# >> bcond_without
+# << bcond_without
+
 Summary:    Application to show KDE Application documentation
 Version:    5.0.0
 Release:    1
@@ -86,6 +92,7 @@ desktop-file-install --delete-original       \
 %{_kf5_libdir}/libexec/khc_docbookdig.pl
 %{_kf5_libdir}/libkdeinit5_khelpcenter.so
 %{_kf5_sharedir}/khelpcenter
+%{_kf5_sharedir}/kxmlgui5/khelpcenter/*
 %{_datadir}/applications/Help.desktop
 %{_datadir}/config.kcfg/khelpcenter.kcfg
 %{_kf5_servicesdir}/*
