@@ -8,12 +8,6 @@ Name:       khelpcenter
 # >> macros
 # << macros
 
-# >> bcond_with
-# << bcond_with
-
-# >> bcond_without
-# << bcond_without
-
 Summary:    Application to show KDE Application documentation
 Version:    5.0.0
 Release:    1
@@ -53,7 +47,7 @@ requiring a text editing component.
 
 
 %prep
-%setup -q -n %{name}-%{version}/upstream
+%setup -q -n %{name}-%{version}
 
 # >> setup
 # << setup
