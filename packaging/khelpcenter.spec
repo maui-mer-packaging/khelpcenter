@@ -39,7 +39,6 @@ BuildRequires:  kcmutils-devel
 BuildRequires:  khtml-devel
 BuildRequires:  kdelibs4support-devel
 BuildRequires:  kdoctools-devel
-BuildRequires:  desktop-file-utils
 
 %description
 An advanced editor component which is used in numerous KDE applications
@@ -71,10 +70,6 @@ rm -rf %{buildroot}
 # >> install post
 # << install post
 
-desktop-file-install --delete-original       \
-  --dir %{buildroot}%{_datadir}/applications             \
-   %{buildroot}%{_datadir}/applications/*.desktop
-
 %files
 %defattr(-,root,root,-)
 %doc README.htdig README.metadata COPYING
@@ -87,8 +82,8 @@ desktop-file-install --delete-original       \
 %{_kf5_libdir}/libkdeinit5_khelpcenter.so
 %{_kf5_sharedir}/khelpcenter
 %{_kf5_sharedir}/kxmlgui5/khelpcenter/*
-%{_datadir}/applications/Help.desktop
-%{_datadir}/config.kcfg/khelpcenter.kcfg
+%{_kf5_sharedir}/applications/*.desktop
+%{_kf5_sharedir}/config.kcfg/khelpcenter.kcfg
 %{_kf5_servicesdir}/*
 %{_kf5_dbusinterfacesdir}/org.kde.khelpcenter.kcmhelpcenter.xml
 %{_kf5_htmldir}/en/khelpcenter
